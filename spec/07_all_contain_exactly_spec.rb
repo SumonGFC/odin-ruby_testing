@@ -18,6 +18,10 @@ describe Array do
     # The order does not matter.
     expect(numbers).to contain_exactly(21, 11, 17)
   end
+
+  it 'has odd first element' do
+    expect(numbers[0]).to be_odd
+  end
 end
 
 describe String do
@@ -79,10 +83,12 @@ describe Array do
   # Write a test that expresses each of the following statements.
 
   # remove the 'x' before running this test
-  xit 'includes 21 and ends with 89' do
+  it 'includes 21 and ends with 89' do
+    expect(fibonacci_sequence).to(include(21).and(end_with(89)))
   end
 
   # remove the 'x' before running this test
-  xit 'starts with 0, 1, 1, 2 and all are under 100' do
+  it 'starts with 0, 1, 1, 2 and all are under 100' do
+    expect(fibonacci_sequence).to start_with([0, 1, 1, 2]).and all(be < 100)
   end
 end
