@@ -70,34 +70,58 @@ describe MagicSeven do
   # Write a test for each of the following methods:
 
   describe '#subtract_four' do
+    it 'returns 0 given 4' do
+      num = 4
+      actual = game.subtract_four(num)
+      expect(actual).to eq(0)
+    end
   end
 
   describe '#divide_by_two' do
+    it 'returns 1 given 2' do
+      num = 2
+      result = game.divide_by_two(num)
+      expect(result).to eq 1
+    end
   end
 
   # The following tests will need you to create new instances of MagicSeven with
   # a specific value for the random_number.
   describe '#subtract_random_number' do
+    it 'returns 0 when class initialized with 20 and method given 20' do
+      magic_seven = MagicSeven.new(20)
+      result = magic_seven.subtract_random_number(20)
+      expect(result).to eq 0
+    end
   end
 
   # The #play method will always return seven! Test this game, using any
   # integer as the random_number. Update the context with the number.
   describe '#play' do
-    context 'when the random number is ...' do
+    context 'when the random number is 69' do
       # remove the 'x' before running this test
-      xit 'will return 7' do
+      it 'will return 7' do
+        test = MagicSeven.new(69)
+        result = test.play
+        expect(result).to eq 7
       end
     end
 
-    context 'when the random number is ...' do
+    context 'when the random number is 420' do
       # remove the 'x' before running this test
-      xit 'will return 7' do
+      it 'will return 7' do
+        test = MagicSeven.new(420)
+        result = test.play
+        expect(result).to eq 7
       end
     end
 
-    context 'when the random number is ...' do
+    context 'when the random number is 42069' do
       # remove the 'x' before running this test
-      xit 'will return 7' do
+      it 'will return 7' do
+        test = MagicSeven.new(42069)
+        result = test.play
+        expect(result).to eq 7
       end
     end
   end
